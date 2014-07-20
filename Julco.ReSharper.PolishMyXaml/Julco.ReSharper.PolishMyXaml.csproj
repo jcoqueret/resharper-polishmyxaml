@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props" Condition="Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A956945-C8CC-4CD3-8D64-EEA76AACCA2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Julco.ReSharper.PolishMyXaml</RootNamespace>
+    <AssemblyName>PolishMyXaml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>028106f6</NuGetPackageImportStamp>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>JET_MODE_ASSERT;DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Platform.ReSharper.ComponentModel, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.DocumentModel, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.DocumentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.IDE, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.IDE.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Interop.WinApi, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.Interop.WinApi.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Metadata, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Shell, Version=8.0.1000.2286, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.Shell.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Shell.Extensions">
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.Shell.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.UI, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.Util, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Platform.ReSharper.VisualStudio.Core, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Platform.ReSharper.VisualStudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Profiler.Core.Api, Version=1.1.994.30095, Culture=neutral, PublicKeyToken=1010a0d8d6380325">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.Profiler.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.PsiFeatures.VisualStudio.Core, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.PsiFeatures.VisualStudio.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.ExternalSources.VS, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.ExternalSources.VS.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Feature.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Feature.Services.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services.Xaml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Feature.Services.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Feature.Services.Xml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Feature.Services.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Features.Common, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Features.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Features.Xml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Features.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.I18n.Services.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.I18n.Services.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.I18n.Services.Xaml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.I18n.Services.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Product.UI, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Product.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Asxx.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Asxx.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.IL, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.IL.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Services, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Services.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Services.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Services.Xaml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Services.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Services.Xml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Services.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Xaml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Xaml.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Xaml.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Psi.Xml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Psi.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Refactorings.CSharp, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Refactorings.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Refactorings.Xaml, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Refactorings.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.ReSharper.Resources, Version=7.1.25.156, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\JetBrains\ReSharper\v8.0\SDK\Bin\JetBrains.ReSharper.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupAligmentAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupBorderOptionAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupCanvasAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupGeometryDefinitionAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupGridAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupSizeAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\GroupingProccessors\GroupStrokeOptionAttributProcessor.cs" />
+    <Compile Include="CodeCleanup\Interfaces\ITreeElementProcessor.cs" />
+    <Compile Include="CodeCleanup\Interfaces\IProcessor.cs" />
+    <Compile Include="CodeCleanup\PolishXamlCodeCleanup.cs" />
+    <Compile Include="CodeCleanup\ProcessorCatalog.cs" />
+    <Compile Include="CodeCleanup\Settings\DescriptorSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Updates\PluginLocalEnvironmentInfo.cs" />
+    <Compile Include="Updates\UpdatesNotifier.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Updates.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <!--<ReSharperSdkTargets Condition=" '$(ReSharperSdkTargets)' == '' ">$(MSBuildExtensionsPath)\JetBrains\ReSharper.SDK\v8.0</ReSharperSdkTargets>-->
+    <ReSharperSdkTargets Condition=" '$(ReSharperSdkTargets)' == '' ">..\packages\JetBrains.ReSharper.SDK.8.2.1158\build</ReSharperSdkTargets>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(ReSharperSdkTargets)\Plugin.Targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Props'))" />
+    <Error Condition="!Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets" Condition="Exists('..\packages\JetBrains.ReSharper.SDK.8.2.1158\build\JetBrains.ReSharper.SDK.Targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>
